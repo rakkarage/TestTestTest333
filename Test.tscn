@@ -1,0 +1,44 @@
+[gd_scene load_steps=8 format=3 uid="uid://cxj1yu6ib8tqd"]
+
+[ext_resource type="Texture2D" uid="uid://dn6khsnblx6ig" path="res://96060954-ef09a200-0e5f-11eb-96a3-620e5dc97d73.png" id="1_qng2l"]
+[ext_resource type="Texture2D" uid="uid://biy85j0uhc2j1" path="res://96060988-00eb4500-0e60-11eb-8f42-4e00fd472b5c.png" id="2_c8yw4"]
+[ext_resource type="Texture2D" uid="uid://cpr1lamkwy65q" path="res://96061014-1496ab80-0e60-11eb-94ca-bed6c9ac6fab.png" id="3_5q3ko"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ckog1"]
+texture = ExtResource("1_qng2l")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lec07"]
+texture = ExtResource("2_c8yw4")
+margins = Vector2i(32, 32)
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t2uh7"]
+texture = ExtResource("3_5q3ko")
+margins = Vector2i(32, 32)
+separation = Vector2i(32, 32)
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_aj30f"]
+tile_size = Vector2i(64, 64)
+sources/0 = SubResource("TileSetAtlasSource_ckog1")
+sources/1 = SubResource("TileSetAtlasSource_lec07")
+sources/2 = SubResource("TileSetAtlasSource_t2uh7")
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_aj30f")
+format = 2
